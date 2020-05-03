@@ -5,12 +5,13 @@
   
   <div class="container">
     <div class="card-deck todo mb-3 text-center">
-      <div class="card mb-4 shadow-sm">
+      <div class="card  mb-4 shadow-sm">
         <div class="card-header">
           <h4 class="my-0 font-weight-normal">Todo List</h4>
         </div> 
         <div class="card-body">
-          <table class="table table-striped  ">
+          <div class="table-responsive-sm">
+         <table class="table   ">
             <thead>
               <tr>
                 <th scope="col">Description</th>
@@ -18,21 +19,10 @@
                 <th scope="col">Action</th>
               </tr>
             </thead>
-              <tr>
-                
-                    <td class="card-text">Mark is how u do</td>
-                    <td class="card-text"></td>
-                    <td>
-
-                      <button type="button" class="btn btn-link">done</button>
-                      <button type="button" class="btn btn-link">edit</button>
-                      <button type="button" class="btn btn-link">delete</button>
-                    </td>
-              </tr>
+            <tbody id="the-table">
+            </tbody>
             </table>
-          <ul class="list-unstyled mt-3 mb-4">
-            
-          </ul>
+            </div>
         </div>
       </div>
       <div class="card mb-4 shadow-sm">
@@ -40,7 +30,24 @@
           <h4 class="my-0 font-weight-normal">Add New Todo</h4>
         </div>
         <div class="card-body">
-        
+          <form id="form">
+            <div class ="add"  >
+            <div class="form-group">
+              
+              <input type="text" id="description"  class="form-control"  placeholder="Description..">
+            </div>
+            <div class="form-group">
+              <input type="text" id="assigned" class="form-control"   placeholder="Assigned to.. ">
+            </div>
+            <div class="form-group">
+                <input type="text" id="date" class="form-control"   placeholder="Date..yyyy-mm-dd">
+              </div>
+              <button type="button"  id="btnAdd" class="btn btn-primary mr-1" >Add</button>
+              
+              <button type="button" id="btnReset" class="btn btn-primary ">Reset</button>
+              <p id="demo2"></p>
+            </div>
+          </form>
           
         </div>
       </div>
@@ -49,7 +56,11 @@
           <h4 class="my-0 font-weight-normal">Scrap Pad</h4>
         </div>
         <div class="card-body">
-          
+          <div class="input-group h-50">
+                
+            <textarea class="form-control" aria-label="With textarea "></textarea>
+          </div>
+          <button type="button" class="btn btn-primary mt-4">Save</button>
         </div>
       </div>
     </div>
